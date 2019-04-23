@@ -255,6 +255,7 @@ contract ERC721 is Pausable, ERC165 {
         _ownedTokensCount[from].decrement();
         _tokenOwner[tokenId] = to;
         // TODO: emit correct event
+        emit Transfer(from,to,tokenId);
     }
 
     /**
@@ -460,9 +461,11 @@ contract ERC721Enumerable is ERC165, ERC721 {
 contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     
     // TODO: Create private vars for token _name, _symbol, and _baseTokenURI (string)
-
+    string private _name;
+    string private _symbol;
+    string private _baseTokenURI;
     // TODO: create private mapping of tokenId's to token uri's called '_tokenURIs'
-
+    mapping (uint256 => string) private _tokenURIs;
     bytes4 private constant _INTERFACE_ID_ERC721_METADATA = 0x5b5e139f;
     /*
      * 0x5b5e139f ===
@@ -474,7 +477,9 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 
     constructor (string memory name, string memory symbol, string memory baseTokenURI) public {
         // TODO: set instance var values
-
+        _name = name;
+        _symbol = symol;
+        _baseTokenURI = baseTokenURI;
         _registerInterface(_INTERFACE_ID_ERC721_METADATA);
     }
 
@@ -492,17 +497,23 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     // TIP #2: you can also use uint2str() to convert a uint to a string
         // see https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol for strConcat()
     // require the token exists before setting
-
+function setTokenURI(uint256 tokenId){
+    require(_exists(tokenId), "token id doens't exist");
+    _tokenURIs[tokenId] = strConcat(_baseTokenURI,uint2str(tokenId));
+}
 }
 
 //  TODO's: Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
+
+
+contract omarContract is CustomERC721Token { //omar is my sun's name =0
 //  1) Pass in appropriate values for the inherited ERC721Metadata contract
 //      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
+
 //  2) create a public mint() that does the following:
 //      -can only be executed by the contract owner
 //      -takes in a 'to' address, tokenId, and tokenURI as parameters
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
-
-
+}
 
