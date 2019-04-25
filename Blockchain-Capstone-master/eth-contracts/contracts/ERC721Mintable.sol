@@ -142,7 +142,7 @@ contract ERC721 is Pausable, ERC165 {
         function balanceOf(address owner) public view returns (uint256) {
             // TODO return the token balance of given address
             // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
-            return  _ownedTokensCount[owner].current; //Counters.current returns the value of counter
+            return  _ownedTokensCount[owner].current(); //Counters.current returns the value of counter
         }
 
         function ownerOf(uint256 tokenId) public view returns (address) {
@@ -517,7 +517,7 @@ contract omarContract is ERC721Metadata("omar contract", "OM" , "https://s3-us-w
     //      -returns a true boolean upon completion of the function
     //      -calls the superclass mint and setTokenURI functions
 
-        function mint(address to ,uint256 tokenId , string tokenURI ) public onlyOwner returns(bool){
+        function mint(address to ,uint256 tokenId , string memory tokenURI ) public onlyOwner returns(bool){
             _mint(to , tokenId);
             setTokenURI(tokenId);
             return true;

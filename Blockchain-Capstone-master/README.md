@@ -5,9 +5,14 @@ The capstone will build upon the knowledge you have gained in the course in orde
 ## Install
 `npm install`
 `npm install openzeppelin-solidity`
-`npm install truffle-hdwallet-provider`
-`npm install bignumber.js`
 `truffle compile`
+
+## Develop Client
+
+To run truffle tests:
+
+`truffle test ./test/TestERC721Mintable.js`
+
 
 # Project Resources
 
