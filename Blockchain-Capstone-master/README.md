@@ -3,6 +3,11 @@
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
 ## Install
+`npm install`
+`npm install openzeppelin-solidity`
+`npm install truffle-hdwallet-provider`
+`npm install bignumber.js`
+`truffle compile`
 
 # Project Resources
 
