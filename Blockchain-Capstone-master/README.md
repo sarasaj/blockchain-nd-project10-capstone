@@ -13,6 +13,12 @@ To run truffle tests:
 
 `truffle test ./test/TestERC721Mintable.js`
 
+docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+
+docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blockchain-Capstone-master/zokrates/code:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+
+docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blockchain-Capstone-master/zokrates/code:/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
+
 
 # Project Resources
 
