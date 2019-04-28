@@ -24,17 +24,40 @@ mapping(bytes32 => solution) private solutions;
 
 // TODO Create an event to emit when a solution is added
 
-event solutionAdded(address solution, uint256 index);
+event solutionAdded(uint256 index,address solAddress);
 
 // TODO Create a function to add the solutions to the array and emit the event
 
 function addSolution (uint256 _index ,address _solAddress, bytes32 _solHash) public{
-    solutions[]
+    solutions[_solHash] = solution({
+        index: _index ,
+        solAddress: _solAddress
+    });
+    emit solutionAdded(_index,_solAddress);
 }
-
+Verifier verifierContract;
+constructor(address verifierContract) public{
+    verifierContract = Verifier(verifierContract);
+}
 // TODO Create a function to mint new NFT only after the solution has been verified
 //  - make sure the solution is unique (has not been used before)
 //  - make sure you handle metadata as well as tokenSuplly
+function mintNewNFT
+                    (
+                    address Address , 
+                    uint265 id,
+                    uint[2] memory a,
+                    uint[2] memory a_p,
+                    uint[2][2] memory b,
+                    uint[2] memory b_p,
+                    uint[2] memory c,
+                    uint[2] memory c_p,
+                    uint[2] memory h,
+                    uint[2] memory k,
+                    uint[2] memory input
+                    ) {
+
+                    }
 }
 
 
