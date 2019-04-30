@@ -27,13 +27,21 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
 
 ##deploying verifier contract
 'Verifier'
-   --------------------
+--------------------
    > transaction hash:    0x48094289a68da8c48a5680ee48e8dddd605b5b85dbb7a357e7aa0717c61a273c
    > contract address:    0xf0231971783aA62299B57918A6F17138aCda7840
    > account:             0xDfaAFaad74Ab0D7781FCE1038C8913869c10E09E
-   --------------------
+--------------------
 ##deploying SolnSquareVerifier contract
-change the 
+- change the mnemonic to your meta mask wallet
+- i have two laptops i changed the laptop when deploying to rinkeby because i had a problem the mac 
+
+'SolnSquareVerifier'
+------------------------------
+   > transaction hash:    0x016c9d3c5f6a7ddc6e660253f628adcfd9767172c4d4a4606b0782aece95ed23
+   > contract address:    0x37FF627F1650974f4d82f6A34c9C10aD2F0a2d96
+   > account:             0x46Bab659378011Ab000c7EE3bdb0717569B63d03
+------------------------------
 
 
 # Project Resources

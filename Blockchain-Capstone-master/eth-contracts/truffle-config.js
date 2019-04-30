@@ -19,7 +19,7 @@
  */
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = "unveil sugar library owner faint avocado clerck off target junior used shoot" //meta mask seed
+const mnemonic = "unveil sugar library owner faint avocado clerk off target junior used shoot" //meta mask seed
 // const infuraKey = "fj4jll3k.....";
 
 // const fs = require('fs');
@@ -34,7 +34,7 @@ module.exports = {
    * network from the command line, e.g
    *
    * $ truffle test --network <network-name>
-   * truffle migrate --reset --network --rinkeby
+   * truffle migrate --network --rinkeby --reset
    */
 
   networks: {
@@ -49,11 +49,20 @@ module.exports = {
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
      },
-     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318`),
-      network_id: 4,       // Ropsten's id
-      gasPrice: 21000000000
-    }
+    // rinkeby: {
+    //   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318`),
+    //   network_id: 4,       // Ropsten's id
+    //   gasPrice: 21000000000,
+    // },
+  rinkeby:{
+    host: "localhost",
+    provider: function() {
+    return new HDWalletProvider(mnemonic , "https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318");
+    },
+    network_id:4
+    , gas : 6700000
+    , gasPrice : 10000000000
+  }
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
