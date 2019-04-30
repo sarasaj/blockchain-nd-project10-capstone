@@ -1,6 +1,5 @@
-import { AssertionError } from "assert";
 
-var ERC721MintableComplete = artifacts.require('ERC721MintableComplete');
+var ERC721MintableComplete = artifacts.require('omarContract');
 
 contract('TestERC721Mintable', accounts => {
 
@@ -13,18 +12,18 @@ contract('TestERC721Mintable', accounts => {
 
             // TODO: mint multiple tokens
             for (let index = 10; index < 15; index++) {
-                await this.contract.mint(account[index],index,"newtoken:url");
+                await this.contract.mint(accounts[index],index,"newtoken:url");
                 
             }
         })
 
         it('should return total supply', async function () { 
-            let totalSupply = this.contract.totalSupply();
-            assert.equal(totalSupply,7,"totsl dupply of tokens id not corect");
+            let totalSupply = await this.contract.totalSupply();
+            assert.equal(totalSupply,5,"total supply of tokens id not corect");
         })
 
         it('should get token balance', async function () { 
-            let balance = await this.contract.balanceOf(account[10]);
+            let balance = await this.contract.balanceOf(accounts[10]);
             assert.equal(balance,1,"token count is not correct");
         })
 
@@ -35,11 +34,11 @@ contract('TestERC721Mintable', accounts => {
         })
 
         it('should transfer token from one owner to another', async function () { 
-            let from = account[11]; //or use get ownerOf()
-            let to = account[12];
+            let from = accounts[11]; //or use get ownerOf()
+            let to = accounts[12];
 
             await this.contract.transferFrom(from,to,11,{from: from});
-            let newOwner = this.contract.ownerOf(11,{from:account_one});
+            let newOwner = await this.contract.ownerOf(11,{from:account_one});
             assert.equal(newOwner,to,"transferFrom has failed")
         })
     });
