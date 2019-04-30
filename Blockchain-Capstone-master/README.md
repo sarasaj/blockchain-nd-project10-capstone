@@ -21,6 +21,8 @@ seprate tests:
 all tests:
 `truffle test`
 
+## Zokrates
+5 proofs were generated in the ouside folder.
 docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blockchain-Capstone-master/zokrates/code:/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
 
 ##deploying verifier contract
@@ -31,7 +33,7 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
    > account:             0xDfaAFaad74Ab0D7781FCE1038C8913869c10E09E
    --------------------
 ##deploying SolnSquareVerifier contract
-
+change the 
 
 
 # Project Resources
