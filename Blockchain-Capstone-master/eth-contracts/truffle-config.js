@@ -19,23 +19,24 @@
  */
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = "unveil sugar library owner faint avocado clerk off target junior used shoot" //meta mask seed
+const mnemonic = "unveil sugar library owner faint avocado clerk off target junior used shoot"; //meta mask seed
 // const infuraKey = "fj4jll3k.....";
 
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
-  /**
-   * Networks define how you connect to your ethereum client and let you set the
-   * defaults web3 uses to send transactions. If you don't specify one truffle
-   * will spin up a development blockchain for you on port 9545 when you
-   * run `develop` or `test`. You can ask a truffle command to use a specific
-   * network from the command line, e.g
-   *
-   * $ truffle test --network <network-name>
-   * truffle migrate --network --rinkeby --reset
-   */
+  // **
+  //  * Networks define how you connect to your ethereum client and let you set the
+  //  * defaults web3 uses to send transactions. If you don't specify one truffle
+  //  * will spin up a development blockchain for you on port 9545 when you
+  //  * run `develop` or `test`. You can ask a truffle command to use a specific
+  //  * network from the command line, e.g
+  //  *
+  //  * $ truffle test --network <network-name>
+  //  *
+  //  *   truffle migrate --network rinkeby --reset
+  //  *
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -50,19 +51,30 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
      },
     // rinkeby: {
-    //   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318`),
-    //   network_id: 4,       // Ropsten's id
-    //   gasPrice: 21000000000,
-    // },
-  rinkeby:{
-    host: "localhost",
-    provider: function() {
-    return new HDWalletProvider(mnemonic , "https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318");
+    //   provider: function() { 
+    //     return new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318') 
+    //   },
+    //   network_id: 4,
+    //   gas: 4500000,
+    //   gasPrice: 10000000000,
+    // }
+    rinkeby: {
+      provider: function() {
+       return new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318')
+         },
+          network_id: 4,
+          gas: 5000000,
+          gasPrice: 10000000000,
     },
-    network_id:4
-    , gas : 6700000
-    , gasPrice : 10000000000
-  }
+  // rinkeby:{
+  //   host: "localhost",
+  //   provider: function() {
+  //   return new HDWalletProvider(mnemonic , "https://rinkeby.infura.io/v3/29b0a2dd7ee74bcbbbf5c921ef106318");
+  //   },
+  //   network_id:4
+  //   , gas : 6700000
+  //   , gasPrice : 10000000000
+  // }
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port

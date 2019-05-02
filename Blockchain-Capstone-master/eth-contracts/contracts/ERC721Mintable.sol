@@ -491,7 +491,17 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         require(_exists(tokenId));
         return _tokenURIs[tokenId];
     }
+    function name() external view returns(string memory) {
+        return _name;
+    }
 
+    function symbol() external view returns(string memory) {
+        return _symbol;
+    }
+
+    function baseTokenURI() external view returns(string memory) {
+        return _baseTokenURI;
+    }
 
     // TODO: Create an internal function to set the tokenURI of a specified tokenId
     // It should be the _baseTokenURI + the tokenId in string form

@@ -2,6 +2,9 @@
 
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
+##documentation
+the documentation folder contains screenshots of testing , migrating , minting and proof.json files please take a look at it. 
+
 ## Install
 `npm install`
 `npm install openzeppelin-solidity`
@@ -32,6 +35,7 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
    > contract address:    0xf0231971783aA62299B57918A6F17138aCda7840
    > account:             0xDfaAFaad74Ab0D7781FCE1038C8913869c10E09E
 --------------------
+
 ##deploying SolnSquareVerifier contract
 - change the mnemonic to your meta mask wallet
 - i have two laptops i changed the laptop when deploying to rinkeby because i had a problem the mac 
@@ -42,6 +46,10 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
    > contract address:    0x37FF627F1650974f4d82f6A34c9C10aD2F0a2d96
    > account:             0x46Bab659378011Ab000c7EE3bdb0717569B63d03
 ------------------------------
+i redeployed the contract because i had problems in opensea:
+
+##deploying SolnSquareVerifier contract
+- for minting i used `myEtherWallet` suggested by the awesome mentor chris
 
 
 # Project Resources
