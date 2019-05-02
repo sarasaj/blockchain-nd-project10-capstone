@@ -20,6 +20,7 @@
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const mnemonic = "unveil sugar library owner faint avocado clerk off target junior used shoot"; //meta mask seed
+//const mnemonic = "grain seminar tuition fruit jealous fish much cram magnet switch daughter accuse"; //meta mask seed
 // const infuraKey = "fj4jll3k.....";
 
 // const fs = require('fs');

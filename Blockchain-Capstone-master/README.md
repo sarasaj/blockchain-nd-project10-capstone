@@ -31,8 +31,8 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
 ##deploying verifier contract
 'Verifier'
 --------------------
-   > transaction hash:    0x48094289a68da8c48a5680ee48e8dddd605b5b85dbb7a357e7aa0717c61a273c
-   > contract address:    0xf0231971783aA62299B57918A6F17138aCda7840
+   > transaction hash:    0x1fbd085b84a27659bbc2ecd6eb493aa6dbce8611c90b7c37a59f5f65173cdc78
+   > contract address:    0xCa7D0CE4671abbD303FBC81e9Dc0ab263f5BB52A
    > account:             0xDfaAFaad74Ab0D7781FCE1038C8913869c10E09E
 --------------------
 
@@ -40,12 +40,12 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
 - change the mnemonic to your meta mask wallet
 - i have two laptops i changed the laptop when deploying to rinkeby because i had a problem the mac 
 
-'SolnSquareVerifier'
-------------------------------
-   > transaction hash:    0x016c9d3c5f6a7ddc6e660253f628adcfd9767172c4d4a4606b0782aece95ed23
-   > contract address:    0x37FF627F1650974f4d82f6A34c9C10aD2F0a2d96
+   Replacing 'SolnSquareVerifier'
+   ------------------------------
+   > transaction hash:    0x9179d6083402a9eae4ed16320578506ecf47b8e48f26d826ff10133d9ead8d73
+   > contract address:    0xEaaa1A274cEb1C159f629bc986A1B194690C80b0
    > account:             0x46Bab659378011Ab000c7EE3bdb0717569B63d03
-------------------------------
+   ------------------------------ß
 i redeployed the contract because i had problems in opensea:
 
 ##deploying SolnSquareVerifier contract
