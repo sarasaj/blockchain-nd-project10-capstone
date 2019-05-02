@@ -12,6 +12,7 @@ oh and by the way omar is my sun .. i named this contract by his name .. i start
 `npm install truffle-hdwallet-provider`
 `truffle compile`
 `truffle migrate --reset`
+`truffle migrate --network rinkeby --reset`
 
 ## Develop Client
 
@@ -26,7 +27,8 @@ all tests:
 `truffle test`
 
 ## Zokrates
-5 proofs were generated in the ouside folder.
+10 proofs were generated in the ouside folder.
+
 docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blockchain-Capstone-master/zokrates/code:/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
 
 ##deploying verifier contract
@@ -39,7 +41,6 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
 
 ##deploying SolnSquareVerifier contract
 - change the mnemonic to your meta mask wallet
-- i have two laptops i changed the laptop when deploying to rinkeby because i had a problem the mac 
 
    Replacing 'SolnSquareVerifier'
    ------------------------------
