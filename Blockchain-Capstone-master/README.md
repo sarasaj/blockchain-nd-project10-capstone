@@ -46,11 +46,12 @@ docker run -v /Users/Ayman/Documents/GitHub/blockchain-nd-project10-capstone/Blo
    > transaction hash:    0x9179d6083402a9eae4ed16320578506ecf47b8e48f26d826ff10133d9ead8d73
    > contract address:    0xEaaa1A274cEb1C159f629bc986A1B194690C80b0
    > account:             0x46Bab659378011Ab000c7EE3bdb0717569B63d03
-   ------------------------------ß
-i redeployed the contract because i had problems in opensea:
+   ------------------------------
+i redeployed the contract because i had problems in opensea
 
 ##deploying SolnSquareVerifier contract
 - for minting i used `myEtherWallet` suggested by the awesome mentor chris
+- i used mint a few time before figureing out how to diplay the images thats why some of the listed things are not correct but five are correct
 
 ##open sea link
 https://rinkeby.opensea.io/category/omarcontract
