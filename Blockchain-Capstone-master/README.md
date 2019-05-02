@@ -3,7 +3,8 @@
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
 ##documentation
-the documentation folder contains screenshots of testing , migrating , minting and proof.json files please take a look at it. 
+the documentation folder contains screenshots and files for the testing , migrating , minting , proof.json files and opensea please take a look at it. 
+oh and by the way omar is my sun .. i named this contract by his name .. i started this course 12 oct and had him on 16 
 
 ## Install
 `npm install`
@@ -51,6 +52,8 @@ i redeployed the contract because i had problems in opensea:
 ##deploying SolnSquareVerifier contract
 - for minting i used `myEtherWallet` suggested by the awesome mentor chris
 
+##open sea link
+https://rinkeby.opensea.io/category/omarcontract
 
 # Project Resources
 
