@@ -5103,7 +5103,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.8",
-  "updatedAt": "2019-05-02T06:24:40.369Z",
+  "updatedAt": "2019-05-02T06:54:59.630Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {
